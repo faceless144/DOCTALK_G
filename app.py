@@ -11,7 +11,7 @@ import shutil
 from io import BytesIO
 
 # Set OpenAI API Key
-openai.api_key = st.secrets["openai_key"]
+#openai.api_key = st.secrets["openai_key"]
 Groq.api_key = st.secrets["groq_key"]
 
 def main():
