@@ -4,13 +4,15 @@ import tempfile
 import os
 from llama_index.core import SimpleDirectoryReader, VectorStoreIndex, ServiceContext
 import openai
-from llama_index.llms.openai import OpenAI
+# from llama_index.llms.openai import OpenAI
+from llama_index.llms.groq import Groq
 from pathlib import Path
 import shutil
 from io import BytesIO
 
 # Set OpenAI API Key
 openai.api_key = st.secrets["openai_key"]
+Groq.api_key = st.secrets["Groq_key"]
 
 def main():
     st.title("DocTalk, talk to your docs  - Developed by Abhyas Manne")
